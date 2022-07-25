@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+@import "../node_modules/bulma/css/bulma.css";
+
+// import font 
+@font-face {
+  font-family: 'Anurati';
+  src: url('../src/assets/font/Anurati-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Set your brand colors
+$black: #000;
+$blue: #74ceeb;
+$white: #fff;
+$purple: #705df1;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$primary: $white;
+$light: $purple;
+$grey-light: $purple;
+
+// Update some of Bulma's component variables
+$navbar-height: 5rem;
+$footer-padding: 3rem 1.5rem;
+
+// Custome styles
+.has-big-title {
+    color: $black;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.125;
+}
+
+img.has-light-shadow {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7));
+}
+  
+img.has-dark-shadow {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+}
+
+@import "../node_modules/bulma/";
