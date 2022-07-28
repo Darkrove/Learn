@@ -3,7 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Screen shot
-![image](https://user-images.githubusercontent.com/53792139/180824230-84dfa527-761e-4901-9c33-d64c0b8153b0.png)
+![image](https://user-images.githubusercontent.com/53792139/181619939-4f4c250b-2aff-4f55-9584-2a7bda7333df.png)
+
 
 
 ## Development server
