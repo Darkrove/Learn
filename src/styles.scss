@@ -12,6 +12,7 @@
 
 // Set your brand colors
 $black: #000;
+$grey: rgb(15, 15, 15);
 $blue: #74ceeb;
 $white: #fff;
 $purple: #705df1;
@@ -20,20 +21,19 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$primary: $white;
+$primary: $grey;
 $light: $purple;
-$grey-light: $purple;
+$link: $purple;
 
 // Update some of Bulma's component variables
 $navbar-height: 5rem;
 $footer-padding: 3rem 1.5rem;
+$title-color: $white;
+$subtitle-color: $white;
 
 // Custome styles
-.has-big-title {
-    color: $black;
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.125;
+body {
+    background-color: $grey;
 }
 
 img.has-light-shadow {
@@ -42,6 +42,15 @@ img.has-light-shadow {
   
 img.has-dark-shadow {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+}
+
+.center-block {
+    margin: auto;
+    display:block;
+}
+
+p {
+    color: $white;
 }
 
 @import "../node_modules/bulma/";
