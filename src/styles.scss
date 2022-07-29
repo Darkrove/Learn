@@ -19,25 +19,32 @@ $purple: #705df1;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
+$transparent: rgba(0, 0, 0, 0);
+
 
 // Update Bulma's global variables
 $primary: $grey;
 $light: $purple;
 $link: $purple;
+$dark:#150c21;
 
 // Update some of Bulma's component variables
 $navbar-height: 5rem;
 $footer-padding: 3rem 1.5rem;
 $title-color: $white;
 $subtitle-color: $white;
+$hero-body-padding: 6rem;
+$card-radius: 1rem;
+$card-background-color: $transparent;
+$card-shadow: 0px 3px 3px rgba(163, 163, 163, 0.5);
 
 // Custome styles
 body {
     background-color: $grey;
 }
 
-img.has-light-shadow {
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7));
+.has-white-shadow {
+    filter: drop-shadow(0px 3px 3px rgba(156, 156, 156, 0.5));
 }
   
 img.has-dark-shadow {
@@ -51,6 +58,18 @@ img.has-dark-shadow {
 
 p {
     color: $white;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(250px,1fr));
+	grid-gap: 1.5em;
+}
+
+.card{
+    max-width: 150px;
+	height: max-content;
+    border: #6f00ff solid 1px;
 }
 
 @import "../node_modules/bulma/";
