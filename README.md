@@ -5,6 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Screen shot
 ![image](https://user-images.githubusercontent.com/53792139/181821663-5a03befd-fd49-49b2-a1da-d3c6972e16f2.png)
 
+## Install Angular CLI
+
+To install the Angular CLI, open a terminal window and run the command `npm install -g @angular/cli`
+
+To allow the execution of PowerShell scripts `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
 
 ## Development server
 
