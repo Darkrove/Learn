@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "name": "card 1",
+      "title": "You don't need to have done WebGL or Three.js before.",
+      "description": "This training is intended for absolute beginners and will explain the basics before tackling more advanced topics.",
+      "image": "../assets/svg/Sample 33.svg",
+      "link": "card 1 link"
+    },
+    {
+      "id": 2,
+      "name": "card 2",
+      "title": "You don't have to be good at mathematics.",
+      "description": "Yes, we're going to do mathematics, but at a simple level and we will explain how it works with drawings and practice slowly.",
+      "image": "../assets/svg/Sample 34.svg",
+      "link": "card 2 link"
+    }
+  ]
+}

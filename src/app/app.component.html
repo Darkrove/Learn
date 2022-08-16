@@ -18,98 +18,15 @@
   <p class="title has-text-centered">Is this course for you?</p>
   <p class="subtitle has-text-centered">The course is beginner friendly</p>
   <div class="container">
-		<!-- 	Card 1	 -->
-		<div class="card">
-			<div class="card-image">
-				<figure class="image">
-					<img src="../assets/svg/Sample 33.svg" alt="Placeholder image">
-				</figure>
-			</div>
-			<div class="card-content">
-				<div class="content">
-					<p class="subtitle">You don't need to have done WebGL or Three.js before.</p>
-          <a>@bulmaio</a> <a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-          <p>This training is intended for absolute beginners and will explain the basics before tackling more advanced topics.</p>
-				</div>
-			</div>
-		</div>
-		<!-- 	Card 2	 -->
-		<div class="card">
-			<div class="card-image">
-				<figure class="image">
-					<img src="../assets/svg/Sample 34.svg" alt="Placeholder image">
-				</figure>
-			</div>
-			<div class="card-content">
-				<div class="content">
-					<p class="subtitle">You don't have to be good at mathematics.</p>
-          <a>@bulmaio</a> <a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-          <p>
-            Yes, we're going to do mathematics, but at a simple level and we will explain how it works with drawings and practice slowly.
-          </p>
-				</div>
-			</div>
-		</div>
-		<!-- 	Card 3	 -->
-    <div class="card">
-			<div class="card-image">
-				<figure class="image">
-					<img src="../assets/svg/Sample 32.svg" alt="Placeholder image">
-				</figure>
-			</div>
-			<div class="card-content">
-				<div class="content">
-					<p class="subtitle">You don't need to know how to use 3D software.</p>
-          <a>@bulmaio</a> <a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-          <p>
-            Together we will learn the basics of the 3D software Blender to create a model and import it into our scene.
-          </p>
-				</div>
-			</div>
-		</div>
-		
-    <!--  Card 4  -->
-    <div class="card">
-			<div class="card-image">
-				<figure class="image">
-					<img src="../assets/svg/Sample 35.svg" alt="Placeholder image">
-				</figure>
-			</div>
-			<div class="card-content">
-				<div class="content">
-					<p class="subtitle">You don't need to be good at JavaScript.</p>
-          <a>@bulmaio</a> <a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-          <p>
-            All you need are JavaScript basics like variables, objects, arrays, loops, functions and events. We will learn the rest together.
-          </p>
-				</div>
-			</div>
-		</div>
-
-    <!--  Card 5  -->
-    <div class="card">
-			<div class="card-image">
-				<figure class="image">
-					<img src="../assets/svg/Sample 36.svg" alt="Placeholder image">
-				</figure>
-			</div>
-			<div class="card-content">
-				<div class="content">
-					<p class="subtitle">You don't need a crazy ass computer.</p>
-          <a>@bulmaio</a> <a href="#">#css</a> <a href="#">#responsive</a>
-					<br>
-          <p>
-            In some lessons, we will tackle performance limits, and learn how to handle and optimize our code to get good frame rates.
-          </p>
-				</div>
-			</div>
-		</div>
+    <app-card
+      *ngFor="let card of cards"
+      [title] = "card.title"
+      [img] = "card.image"
+      [description] = "card.description">
+    </app-card>
   </div>
-  </section>  
+</section>
+
 <!-- Footer -->
 <app-footer></app-footer>
 
