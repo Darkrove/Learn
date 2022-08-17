@@ -40,4 +40,3 @@ export const Cards = [
     "link": "card 3 link"
   },
 ];
-
