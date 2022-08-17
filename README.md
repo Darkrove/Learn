@@ -1,9 +1,22 @@
-# MyApp
+# Learn App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
-## Screen shot
+## Home screen
 ![image](https://user-images.githubusercontent.com/53792139/181821663-5a03befd-fd49-49b2-a1da-d3c6972e16f2.png)
+
+## Form 
+![image](https://user-images.githubusercontent.com/53792139/185225253-c5b97dcf-d2e0-44ba-bb04-1baeead7c059.png)
+
+## When data is invalid
+![image](https://user-images.githubusercontent.com/53792139/185226289-d87be57e-6514-479c-ab78-5fb152caff99.png)
+
+## When data is valid
+![image](https://user-images.githubusercontent.com/53792139/185225292-5b65149b-a4f9-460e-ac2f-be5f01a4202c.png)
+
+## After Click on Register
+![image](https://user-images.githubusercontent.com/53792139/185226713-8e6f75f6-7504-4f13-b9fa-7b1a6e9b307e.png)
+
 
 ## Install Angular CLI
 
