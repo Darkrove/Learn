@@ -1,0 +1,16 @@
+<!-- Hero -->
+<app-hero></app-hero>
+
+<!-- Cards -->
+<section class="section">
+  <p class="title has-text-centered">Is this course for you?</p>
+  <p class="subtitle has-text-centered">The course is beginner friendly</p>
+  <div class="container">
+    <app-card
+      *ngFor="let card of cards"
+      [title] = "card.title"
+      [img] = "card.image"
+      [description] = "card.description">
+    </app-card>
+  </div>
+</section>

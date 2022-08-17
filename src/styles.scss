@@ -2,7 +2,7 @@
 @charset "utf-8";
 @import "../node_modules/bulma/css/bulma.css";
 
-// import font 
+// import font
 @font-face {
   font-family: 'Anurati';
   src: url('../src/assets/font/Anurati-Regular.otf') format('opentype');
@@ -36,6 +36,11 @@ $subtitle-color: $white;
 $hero-body-padding: 6rem;
 $card-radius: 1rem;
 $card-background-color: $transparent;
+$label-color: $white;
+
+// SCSS variables
+$spacing-shortcuts: ("padding" : "pd");
+$spacing-values: ("small": 10px, "medium": 30px, "large": 60px, "xlarge": 90px, "2xlarge": 120px, "3xlarge": 150px, "4xlarge": 180px, "5xlarge": 210px, "6xlarge": 240px, "7xlarge": 270px, "8xlarge": 300px, "9xlarge": 330px, "10xlarge": 360px);
 
 // Custome styles
 body {
@@ -45,7 +50,7 @@ body {
 .has-white-shadow {
     filter: drop-shadow(0px 3px 3px rgba(156, 156, 156, 0.5));
 }
-  
+
 img.has-dark-shadow {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
 }

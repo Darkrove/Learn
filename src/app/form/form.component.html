@@ -1,0 +1,247 @@
+<div class="pd-xlarge">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- name -->
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input formControlName="fullname" class="input" type="text" placeholder="Text input"
+          [ngClass]="{ 'is-danger': submitted && f['fullname'].errors }" />
+      </div>
+
+      <div *ngIf="submitted && f['fullname'].errors">
+        <div *ngIf="f['fullname'].errors['required']">
+          <p class="help is-danger">Full name required</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- username -->
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control has-icons-left">
+        <input formControlName="username" class="input" type="text" placeholder="Text input" value="bulma"
+          [ngClass]="{ 'is-danger': submitted && f['username'].errors }" />
+        <span class="icon is-small is-left">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </span>
+      </div>
+      <div *ngIf="submitted && f['username'].errors">
+        <div *ngIf="f['username'].errors['required']">
+          <p class="help is-danger">Username is required</p>
+        </div>
+        <div *ngIf="f['username'].errors['minlength']">
+          <p class="help is-danger">Username must be at least 6 characters</p>
+        </div>
+        <div *ngIf="f['username'].errors['maxlength']">
+          <p class="help is-danger">Username must not exceed 20 characters</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="field">
+      <label class="label">Date of Birth</label>
+      <div class="control is-expanded">
+        <input formControlName="dob" class="input" type="date" placeholder="Text input"
+          [ngClass]="{ 'is-danger': submitted && f['dob'].errors }" />
+      </div>
+      <div *ngIf="submitted && f['dob'].errors">
+        <div *ngIf="f['dob'].errors['required']">
+          <p class="help is-danger">Date of Birth is required</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- email -->
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left">
+        <input formControlName="email" class="input" type="email" placeholder="Email input" value="hello@"
+          [ngClass]="{ 'is-danger': submitted && f['email'].errors }" />
+        <span class="icon is-small is-left">
+          <fa-icon [icon]="faAt"></fa-icon>
+        </span>
+      </div>
+      <div *ngIf="submitted && f['email'].errors">
+        <div *ngIf="f['email'].errors['required']">
+          <p class="help is-danger">Email is required</p>
+        </div>
+        <div *ngIf="f['email'].errors['email']">
+          <p class="help is-danger">Email is invalid</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <!-- Country code -->
+        <div class="field">
+          <label class="label">Country Code</label>
+          <div class="control">
+            <div class="select is-fullwidth" [ngClass]="{ 'is-danger': submitted && f['countryCode'].errors }">
+              <select formControlName="countryCode" [ngClass]="{
+                  'is-danger': submitted && f['countryCode'].errors
+                }">
+                <option value="">Select country...</option>
+                <option value="+1">USA +1</option>
+                <option value="+91">India +91</option>
+                <option value="+61">Australia +61</option>
+                <option value="+44">UK +44</option>
+                <option value="+55">Brazil +55</option>
+              </select>
+            </div>
+          </div>
+          <div *ngIf="submitted && f['countryCode'].errors">
+            <div *ngIf="f['countryCode'].errors['required']">
+              <p class="help is-danger">Country code is required</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone number -->
+        <div class="field">
+          <label class="label">Contact Number</label>
+          <div class="control has-icons-left">
+            <input formControlName="mobileNumber" class="input" type="tel" placeholder="Your phone number"
+              [ngClass]="{ 'is-danger': submitted && f['mobileNumber'].errors }" />
+            <span class="icon is-small is-left">
+              <fa-icon [icon]="faPhone"></fa-icon>
+            </span>
+          </div>
+
+          <div *ngIf="submitted && f['mobileNumber'].errors">
+            <div *ngIf="f['mobileNumber'].errors['required']">
+              <p class="help is-danger">Contact number is required</p>
+            </div>
+            <div *ngIf="f['mobileNumber'].errors['pattern']">
+              <p class="help is-danger">
+                Contact number is invalid, it must contain 10 digits
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <!-- Course -->
+        <div class="field">
+          <label class="label">Course</label>
+          <div class="control">
+            <div class="select is-fullwidth" [ngClass]="{ 'is-danger': submitted && f['courseName'].errors }">
+              <select formControlName="courseName">
+                <option value="">Select course...</option>
+                <option value="01-Basic">01 Basics</option>
+                <option value="02-Technique">02 Classic Technique</option>
+                <option value="03-AdvancedTechnique">
+                  03 Advanced Technique
+                </option>
+                <option value="04-Shaders">04 Shaders</option>
+                <option value="05-AdvancedShaders">05 Advanced Shaders</option>
+              </select>
+            </div>
+          </div>
+          <div *ngIf="submitted && f['courseName'].errors">
+            <div *ngIf="f['courseName'].errors['required']">
+              <p class="help is-danger">Course is required</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Slot -->
+        <div class="field">
+          <label class="label">Time Slot</label>
+          <div class="control has-icons-left">
+            <div class="select is-fullwidth" [ngClass]="{ 'is-danger': submitted && f['timeSlot'].errors }">
+              <select formControlName="timeSlot">
+                <option value="">Select time slot...</option>
+                <option value="batch 1">09.00AM to 12.00PM</option>
+                <option value="batch 2">12.00AM to 03.00PM</option>
+                <option value="batch 3">03.00PM to 06.00PM</option>
+                <option value="batch 4">06.00PM to 09.00PM</option>
+              </select>
+            </div>
+            <span class="icon is-small is-left">
+              <fa-icon [icon]="faClock"></fa-icon>
+            </span>
+          </div>
+          <div *ngIf="submitted && f['timeSlot'].errors">
+            <div *ngIf="f['timeSlot'].errors['required']">
+              <p class="help is-danger">Time slot is required</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <!-- Password -->
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control has-icons-left">
+            <input formControlName="password" class="input"
+              [ngClass]="{ 'is-danger': submitted && f['password'].errors }" type="password" />
+            <span class="icon is-small is-left">
+              <fa-icon [icon]="faKey"></fa-icon>
+            </span>
+          </div>
+          <div *ngIf="submitted && f['password'].errors">
+            <div *ngIf="f['password'].errors['required']">
+              <p class="help is-danger">Password is required</p>
+            </div>
+            <div *ngIf="f['password'].errors['minlength']">
+              <p class="help is-danger">
+                Password must be at least 6 characters
+              </p>
+            </div>
+            <div *ngIf="f['password'].errors['maxlength']">
+              <p class="help is-danger">
+                Username must not exceed 40 characters
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Confirm Password</label>
+          <div class="control has-icons-left">
+            <input formControlName="confirmPassword" class="input"
+              [ngClass]="{ 'is-danger': submitted && f['password'].errors }" type="password" />
+            <span class="icon is-small is-left">
+              <fa-icon [icon]="faKey"></fa-icon>
+            </span>
+          </div>
+          <div *ngIf="submitted && f['confirmPassword'].errors">
+            <div *ngIf="f['confirmPassword'].errors['required']">
+              <p class="help is-danger">Confirm Password is required</p>
+            </div>
+            <div *ngIf="f['confirmPassword'].errors['matching']">
+              <p class="help is-danger">Confirm Password does not match</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="checkbox">
+        <input type="checkbox" formControlName="acceptTerms" class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+        I agree to the <a href="#">terms and conditions</a>
+      </label>
+      <div *ngIf="submitted && f['acceptTerms'].errors">
+        <p class="help is-danger">Accept Terms is required</p>
+      </div>
+    </div>
+
+    <div class="field is-grouped is-grouped-right">
+      <p class="control">
+        <button type="submit" class="button is-primary">Register</button>
+      </p>
+      <p class="control">
+        <button class="button is-light" (click)="onReset()">Clear</button>
+      </p>
+    </div>
+  </form>
+</div>
