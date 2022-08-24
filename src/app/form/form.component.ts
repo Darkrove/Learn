@@ -87,6 +87,7 @@ export class FormComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.form.value));
     console.log(JSON.stringify(this.form.value, null, 2));
   }
   onReset(): void {
